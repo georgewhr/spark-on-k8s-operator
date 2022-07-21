@@ -277,6 +277,10 @@ func addDriverConfOptions(app *v1beta2.SparkApplication, submissionID string) ([
 		driverConfOptions = append(driverConfOptions,
 			fmt.Sprintf("spark.driver.memory=%s", *app.Spec.Driver.Memory))
 	}
+	if app.Spec.Driver.Memory != nil {
+		driverConfOptions = append(driverConfOptions,
+			fmt.Sprintf("spark.driver.extraClassPath=%s", *app.Spec.Driver.ExtraClassPath))
+	}
 	if app.Spec.Driver.MemoryOverhead != nil {
 		driverConfOptions = append(driverConfOptions,
 			fmt.Sprintf("spark.driver.memoryOverhead=%s", *app.Spec.Driver.MemoryOverhead))

@@ -114,6 +114,8 @@ spec:
                       type: object
                     driver:
                       properties:
+                        extraClassPath:
+                          type: string
                         affinity:
                           properties:
                             nodeAffinity:

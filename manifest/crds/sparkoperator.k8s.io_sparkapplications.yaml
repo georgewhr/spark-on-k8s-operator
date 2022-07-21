@@ -100,6 +100,8 @@ spec:
                   type: object
                 driver:
                   properties:
+                    extraClassPath:
+                      type: string
                     affinity:
                       properties:
                         nodeAffinity:
@@ -1910,6 +1912,8 @@ spec:
                   type: object
                 executor:
                   properties:
+                    extraClassPath:
+                      type: string
                     affinity:
                       properties:
                         nodeAffinity:
